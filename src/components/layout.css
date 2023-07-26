@@ -1,224 +1,294 @@
-:root {
-  --border-radius: 4px;
-  --color-text: #333;
-  --color-primary: #7026b9;
-  --color-code-bg: #fff4db;
-  --color-code: #8a6534;
-  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
-    sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-  --font-mono: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
-    "Courier New", monospace;
-  --font-lg: 18px;
-  --font-md: 16px;
-  --font-sm: 14px;
-  --font-sx: 12px;
-  --line-height-loose: 1.75;
-  --line-height-normal: 1.5;
-  --line-height-dense: 1.1;
-  --space-1: 4px;
-  --space-2: 8px;
-  --space-3: 16px;
-  --space-4: 24px;
-  --space-5: 32px;
-  --space-6: 64px;
-  --size-content: 54rem;
-  --size-gutter: var(--space-5);
-  --size-gap: var(--space-6);
-}
-html {
-  -webkit-text-size-adjust: 100%;
-  box-sizing: border-box;
-  font: sans-serif;
-  font-size: var(--font-md);
-  line-height: var(--line-height-normal);
-  overflow-y: scroll;
-}
+@import url("https://fonts.googleapis.com/css2?family=BioRhyme&family=Dosis&family=Merriweather&family=Montserrat&family=Raleway&family=Roboto&display=swap%27");
+
 body {
-  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  font-family: "Montserrat", "Roboto";
   -webkit-font-smoothing: antialiased;
-  color: var(--color-text);
-  font-family: sans-serif;
-  font-family: var(--font-sans);
-  font-weight: normal;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.default-background {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(315deg, #ffffff 0%, #414141 74%);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.title {
+  padding: 130px 0;
+  height: 100%;
+  text-align: center;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: 100px;
+  font-weight: 600;
   margin: 0;
-  word-wrap: break-word;
+  font-family: "Playfair Display", serif;
+  color: black;
 }
-a {
-  background-color: transparent;
-  color: var(--color-primary);
-  text-decoration: none;
-  font-weight: 500;
-  text-decoration: underline;
-  text-decoration-thickness: 1.5px;
-  text-underline-offset: 2px;
+
+.home-title {
+  padding: 130px 0;
+  height: 100%;
+  text-align: center;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: 120px;
+  font-weight: 600;
+  margin: 0;
+  font-family: "Playfair Display", serif;
+  color: white;
 }
-a:active,
-a:hover {
-  outline-width: 0;
-  text-decoration: none;
-}
-abbr[title] {
-  border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
-  cursor: help;
-  text-decoration: none;
-}
-b,
-strong {
-  font-weight: inherit;
-  font-weight: bolder;
-}
-dfn {
+
+.subtitle {
+  font-size: 60px;
+  color: white;
   font-style: italic;
-}
-h1 {
-  margin: 0;
-  margin-bottom: 3rem;
-  padding: 0;
-  line-height: var(--line-height-dense);
-  letter-spacing: -0.01em;
-}
-h1 > b {
-  color: var(--color-primary);
-}
-img {
-  border-style: none;
-  max-width: 100%;
-}
-code,
-kbd,
-pre,
-samp {
-  font-family: var(--font-mono);
-  font-size: 1em;
-  line-height: inherit;
-}
-hr {
-  box-sizing: content-box;
-  overflow: visible;
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  padding: 0;
-  margin-bottom: calc(var(--space-4) - 1px);
-  background: hsla(0, 0%, 0%, 0.2);
-  border: none;
-  height: 1px;
-}
-* {
-  box-sizing: inherit;
-}
-*:before {
-  box-sizing: inherit;
-}
-*:after {
-  box-sizing: inherit;
-}
-hgroup,
-img,
-figure,
-fieldset,
-ul,
-ol,
-dl,
-dd,
-p {
-  margin: 0;
-  padding: 0;
-  margin-bottom: var(--space-4);
-}
-ul,
-ol {
-  margin-left: var(--space-4);
-  list-style-position: outside;
-  list-style-image: none;
-}
-pre {
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  margin-bottom: var(--space-4);
-  font-size: 0.875rem;
-  line-height: var(--line-height-normal);
-  background: hsla(0, 0%, 0%, 0.04);
-  border-radius: var(--border-radius);
-  overflow: auto;
-  word-wrap: normal;
-  padding: var(--space-4);
-}
-b,
-strong,
-dt,
-th {
+  letter-spacing: 0.5px;
+  display: block;
   font-weight: bold;
 }
-li {
-  margin-bottom: calc(var(--space-4) / 2);
-}
-ol li,
-ul li {
-  padding-left: 0;
-}
-li > ol,
-li > ul {
-  margin-bottom: calc(var(--space-4) / 2);
-  margin-left: var(--space-4);
-  margin-top: calc(var(--space-4) / 2);
-}
-blockquote *:last-child {
-  margin-bottom: 0;
-}
-li *:last-child {
-  margin-bottom: 0;
-}
-p *:last-child {
-  margin-bottom: 0;
-}
-li > p {
-  margin-bottom: calc(var(--space-4) / 2);
-}
-p {
-  max-width: 680px;
-}
+
 code {
-  font-size: 0.875rem;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
 }
-kbd {
-  font-size: 0.875rem;
+
+html,
+body {
+  outline: none;
 }
-samp {
-  font-size: 0.875rem;
+:focus {
+  outline: none;
 }
-abbr {
-  border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
-  cursor: help;
+
+button {
+  font-family: "Roboto";
 }
-acronym {
-  border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
-  cursor: help;
+
+textarea {
+  resize: none;
 }
-tt,
-code {
-  background-color: var(--color-code-bg);
-  border-radius: var(--border-radius);
-  color: var(--color-code);
-  font-family: var(--font-mono);
-  padding-bottom: 0.25em;
-  padding-top: 0.25em;
-  word-break: normal;
+
+/* Shop */
+
+.img_container:hover .img_description {
+  visibility: visible;
+  opacity: 1;
 }
-pre code {
-  background: none;
+
+.img_description {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 1.5rem;
+  text-align: center;
+  max-height: 420px;
+  background: linear-gradient(white, transparent);
+  color: black;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s, visibility 0.2s;
 }
-code:before,
-code:after,
-tt:before,
-tt:after {
-  content: "\00a0";
-  letter-spacing: -0.2em;
+
+.product-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  justify-content: center;
+  line-height: 0.5em;
+  font-family: "Playfair Display", serif;
+  letter-spacing: 1px;
+  margin-bottom: 1.5rem;
 }
-pre code:before,
-pre code:after,
-pre tt:before,
-pre tt:after {
-  content: none;
+
+.product-price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: olivedrab;
+  justify-content: center;
+  line-height: 0.5em;
+  font-family: "Playfair Display", serif;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+
+
+
+/* Reset password */
+
+.reset-container {
+  display: flex;
+  justify-content: space-around;
+  margin: 9em 0;
+}
+
+@media (max-width: 600px) {
+  .forgot-container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.reset-img {
+  width: 40%;
+  background-image: url("https://github.com/tessa-woodard/urban-roots-revised/blob/main/src/assets/reset-password.jpg?raw=true");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.reset-title {
+  font-size: 5rem;
+  justify-content: center;
+  line-height: 0.8em;
+  margin-bottom: 2rem;
+  font-family: "Playfair Display", serif;
+  letter-spacing: 1.1px;
+  margin-bottom: 5rem;
+}
+
+.reset-flowers {
+  color: olivedrab;
+  font-size: 2rem;
+  justify-content: center;
+  line-height: 0.5em;
+  font-family: "Playfair Display", serif;
+  letter-spacing: 1.1px;
+}
+
+.reset-form-group {
+  line-height: 2rem;
+  padding-bottom: 4rem;
+}
+
+/* 404 page */
+
+@keyframes floating {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  45% {
+    transform: translate3d(0, -10%, 0);
+  }
+  55% {
+    transform: translate3d(0, -10%, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes floatingShadow {
+  0% {
+    transform: scale(1);
+  }
+  45% {
+    transform: scale(0.85);
+  }
+  55% {
+    transform: scale(0.85);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.error-container {
+  font-family: "Varela Round", sans-serif;
+  color: #9b9b9b;
+  position: relative;
+  height: 95vh;
+  text-align: center;
+  font-size: 16px;
+  background-color: #f7f7f7;
+}
+.error-container h1 {
+  font-size: 32px;
+  margin-top: 32px;
+}
+.boo-wrapper {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.boo {
+  width: 160px;
+  height: 184px;
+  background-color: #f7f7f7;
+  margin-left: auto;
+  margin-right: auto;
+  border: 3.3939393939px solid #9b9b9b;
+  border-bottom: 0;
+  overflow: hidden;
+  border-radius: 80px 80px 0 0;
+  box-shadow: -16px 0 0 2px rgba(234, 234, 234, 0.5) inset;
+  position: relative;
+  padding-bottom: 32px;
+  animation: floating 3s ease-in-out infinite;
+}
+.boo::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: -18.8235294118px;
+  bottom: -8.3116883117px;
+  width: calc(100% + 32px);
+  height: 32px;
+  background-repeat: repeat-x;
+  background-size: 32px 32px;
+  background-position: left bottom;
+  background-image: linear-gradient(-45deg, #f7f7f7 16px, transparent 0),
+    linear-gradient(45deg, #f7f7f7 16px, transparent 0),
+    linear-gradient(-45deg, #9b9b9b 18.8235294118px, transparent 0),
+    linear-gradient(45deg, #9b9b9b 18.8235294118px, transparent 0);
+}
+.boo .face {
+  width: 24px;
+  height: 3.2px;
+  border-radius: 5px;
+  background-color: #9b9b9b;
+  position: absolute;
+  left: 50%;
+  bottom: 56px;
+  transform: translateX(-50%);
+}
+.boo .face::before,
+.boo .face::after {
+  content: "";
+  display: block;
+  width: 6px;
+  height: 6px;
+  background-color: #9b9b9b;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 40px;
+}
+.boo .face::before {
+  left: -24px;
+}
+.boo .face::after {
+  right: -24px;
+}
+.shadow {
+  width: 128px;
+  height: 16px;
+  background-color: rgba(234, 234, 234, 0.75);
+  margin-top: 40px;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 50%;
+  animation: floatingShadow 3s ease-in-out infinite;
 }
